@@ -1,0 +1,67 @@
+/* SongRow.css */
+.songRow {
+  margin-left: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  color: white;
+}
+
+.songRow:hover {
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.songRow__info {
+  margin-left: 20px;
+}
+
+.songRow__info > h1 {
+  font-size: 16px;
+}
+
+.songRow__info > p {
+  font-size: 14px;
+  margin-top: 3px;
+  color: gray;
+}
+
+.songRow__album {
+  height: 40px;
+  width: 40px;
+}
+
+/* Customize play and pause buttons */
+.songRow__controls {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Move controls to the right */
+}
+
+.songRow__controls button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #1ed15e;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  margin-right: 10px; /* Add some spacing between buttons */
+}
+
+.songRow__controls button:hover {
+  transform: scale(1.2); /* Increase button size on hover */
+}
+
+/* Style the play button */
+.songRow__controls .playButton::before {
+  content: "\e034"; /* Unicode for the play icon (e.g., ▶) */
+  font-family: 'spotify-icon'; /* Use Spotify's custom icon font */
+}
+
+/* Style the pause button */
+.songRow__controls .pauseButton::before {
+  content: "\e035"; /* Unicode for the pause icon (e.g., II) */
+  font-family: 'spotify-icon'; /* Use Spotify's custom icon font */
+}
